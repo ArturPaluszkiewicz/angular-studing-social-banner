@@ -30,14 +30,22 @@
   <div class="settings">
     <label>Kolor 1</label>
     <div class="colors">
-      <span class="badge"></span>
+      <span class="badge" 
+      *ngFor="let color of colors" 
+      [ngClass]="color"
+      (click)="changeColor1(color)">
+    </span>
     </div>
 
     <input type="range" min="0" max="100" [(ngModel)]="percentColor1"/>
 
     <label>Kolor 2</label>
     <div class="colors">
-      <span class="badge"></span>
+      <span class="badge" 
+      *ngFor="let color of colors.reverse()"
+       [ngClass]="color"
+       (click)="changeColor2(color)">
+      </span>
     </div>
     <input type="range" min="0" max="100" [(ngModel)]="percentColor2"/>
 

@@ -50,4 +50,10 @@ export class AppComponent {
   saveImage(element: HTMLDivElement) {
     domtoimage.toBlob(element).then(blob => saveAs(blob));
   }
+  changeColor1(color: string){
+    this.color1=color;
+  }
+  changeColor2(color: string){
+    this.color2=color;
+  }
 }
