@@ -9,7 +9,7 @@
  <div class="banner">
     <div #banner class="banner-text" [ngStyle]="getBannerStyles()">
       <span contenteditable="true" [style.fontSize.px]="fontSize">
-        Zacznij programować w Angularze {{layout}}
+        Tutaj wpisz swoj tekst
       </span>
     </div>
   </div>
@@ -48,4 +48,9 @@
     <input type="range" min="12" max="72" [(ngModel)]="fontSize"/>
   </div>
   <!-- Component Settings End -->
+</div>
+<div>
+  <a href="#" class="save-butt" (click)="saveImage(banner)">
+    Pobierz
+  </a>
 </div>
