@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  emulatorType: string = "banner";
 
+  changeEmulatorType(type: string): void{
+    this.emulatorType=type;
+  }
 }

@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
+import { MemesComponent } from './memes/memes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BannerComponent
+    BannerComponent,
+    MemesComponent
   ],
   imports: [
     BrowserModule,

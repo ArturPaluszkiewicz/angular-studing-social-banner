@@ -2,8 +2,19 @@
 <nav>
   <div class="nav-wrapper black">
     <a class="brand-logo">Social Banners</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a (click)="changeEmulatorType('banner')">Banner</a></li>
+      <li><a (click)="changeEmulatorType('memes')">Memes</a></li>
+    </ul>
   </div>
 </nav>
 <!-- Component Navbar End -->
+<div>
+  <ng-container *ngIf="emulatorType === 'banner'; then banner; else memes"></ng-container>
+  <ng-template #banner>
+    <app-banner></app-banner>
+  </ng-template>
+  <ng-template #memes>
 
- <app-banner></app-banner>
+  </ng-template>
+</div>
