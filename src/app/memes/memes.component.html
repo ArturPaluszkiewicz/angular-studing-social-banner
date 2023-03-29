@@ -1,1 +1,44 @@
-<p>memes works!</p>
+<!-- Component Banner -->
+<div class="banner">
+    <div #banner class="banner-text" [ngClass]="className" [ngStyle]="getBannerStyles()" >
+      <span contenteditable="true" [style.fontSize.px]="fontSize">
+        Tutaj wpisz swoj tekst
+      </span>
+    </div>
+  </div>
+  <!-- Component Banner End -->
+  <!-- Component Settings -->
+  <div class="settings">
+    <label>Memes Szablon</label>
+    <div class="colors">
+      <span class="badge" 
+      *ngFor="let mem of memes; let i = index; let odd = odd">
+        <ng-container *ngIf="odd; then gray else black"></ng-container>
+          <ng-template #gray>
+          <button class="button-gray" (click)="changePicture(mem)">
+            {{i +1}}. szablon 
+          </button>
+        </ng-template>
+        <ng-template #black>
+          <button class="button-black" (click)="changePicture(mem)">
+            {{i +1}}. szablon 
+          </button>
+        </ng-template>
+      </span>
+    </div>
+
+    <label>Połozenie teksut w poziomie</label>
+    <input type="range" min="0" max="400" step="10" [(ngModel)]="width"/>
+
+    <label>Połozenie teksut w pionie</label>
+    <input type="range" min="0" max="450" step="10" [(ngModel)]="height"/>
+
+    <label>Rozmiar czcionki</label>
+    <input type="range" min="15" max="50" [(ngModel)]="fontSize"/>
+  </div>
+  <!-- Component Settings End -->
+<div>
+  <a href="#" class="save-butt" (click)="saveImage(banner)">
+    Pobierz
+  </a>
+</div>

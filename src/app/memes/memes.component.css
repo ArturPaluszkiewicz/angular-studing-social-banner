@@ -1,0 +1,74 @@
+.mainDiv{
+    display: flex;
+    flex-direction: row;
+}
+.img1 {
+    background-image: url("resources\\be-smart.jpg");
+}
+.img2{
+    background-image: url("resources\\boromir.jpg");
+}
+.img3{
+  background-image: url("resources\\pikachu.jpg");
+}
+.img4{
+  background-image: url("resources\\rttt.jpg");
+}
+.button-black{
+  color: gray;
+  background-color: black;
+}
+.button-black:hover{
+  color: yellow;
+  background-color: green;
+}
+.button-gray{
+  color: black;
+  background-color: gray;
+}
+.button-gray:hover{
+  color: yellow;
+  background-color: green;
+}
+.banner-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: auto;
+    background-color: gray;
+  }
+  .button {
+    margin-left: 2px;
+    background-color: black;
+    color: gray;
+  }
+  .banner {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    .save-butt{
+      display: flex;
+      justify-content: center;
+    }
+    .badge {
+      cursor: pointer;
+      display: inline-block;
+      float: none;
+    }
+    .banner-text {
+      display: flex;
+    }
+    .settings {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      margin: auto;
+      padding: 30px 0 20px 0;
+    }
+    
+    .colors {
+      display: flex;
+      justify-content: center;
+    }
